@@ -19,7 +19,7 @@ angular.module('myApp.register', ['ngRoute', 'firebase'])
       var email = $scope.user.email;
       var password = $scope.user.password;
       if(email && password) {
-        auth.$createUser(email, password)
+        auth.$createUser({email: email, password: password})
         .then(function() {
           console.log('User creation successful');
           $location.path('/home');

@@ -42,7 +42,7 @@ angular.module('myApp.home', ['ngRoute', 'firebase'])
      getUser: function() {
        return user;
      },
-     setUser: function() {
+     setUser: function(value) {
        user = value;
      }
    };
